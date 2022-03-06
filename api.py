@@ -1,10 +1,14 @@
+#API REST para consumo de servicio
+#Creado por josegomezJ
+#2022-03-06
+#se pasa cadena de prueba {"dna":["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG","AAAAGT"]}
 from flask import Flask, jsonify, Response,request
 import mutantexmen
 app = Flask (__name__)
 
+
 @app.route('/')
 def Index():
-
     return 'Proyecto MUTANTE X - ADN'
 
 @app.route('/mutant',methods = ['POST'])
