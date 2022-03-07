@@ -12,7 +12,7 @@ class ToConnectExec:
 
     ########### Conexion DB MYSQL ##############
     def connectDBMysql (self):
-        self.conn = connect(host='127.0.0.1', port=3306, user='integrac_labuser', passwd='8Kdw4%dDJH9x', db='integrac_lab', autocommit = True, cursorclass=DictCursor)
+        self.conn = connect(host='127.0.0.1', port=xxxx, user='******', passwd='*******', db='integrac_lab-***', autocommit = True, cursorclass=DictCursor)
         
     ########### Conexion DB MYSQL ##############
     def connectionMy(self):
