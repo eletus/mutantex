@@ -4,6 +4,7 @@
 #se pasa cadena de prueba {"dna":["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG","AAAAGT"]}
 from flask import Flask, jsonify, Response,request
 import mutantexmen
+import json
 app = Flask (__name__)
 
 
@@ -20,6 +21,12 @@ def run_api():
             mutantes= validateAdn.isMutant(content)
             print(mutantes)
             return jsonify(adn=mutantes)
+
+@app.route('/stats')
+def stats():
+        validateAdn = mutantexmen.Mutant()
+        stadist= validateAdn.stats()
+        return jsonify(stats=stadist)
 
 if __name__ == "__main__":
    app.run(port=5000, debug=True)
